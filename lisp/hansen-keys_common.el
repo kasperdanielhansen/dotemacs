@@ -1,4 +1,4 @@
-(message "Inside hansen-keys_common")
+(message "inside hansen-keys_common")
 
 (defvar kdh-keys-minor-mode-map (make-keymap) "kdh-keys-minor-mode keymap")
 (define-minor-mode kdh-keys-minor-mode

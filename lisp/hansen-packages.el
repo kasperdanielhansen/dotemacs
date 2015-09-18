@@ -1,5 +1,7 @@
 ;; based on Emacs Prelude
 
+(message "inside hansen-packages")
+
 (require 'cl)
 (require 'package)
 
@@ -41,13 +43,13 @@ Missing packages are installed automatically."
 
 (defun hansen-install-packages ()
   "Install all packages listed in `hansen-packages'."
-  (unless (prelude-packages-installed-p)
+  (unless (hansen-packages-installed-p)
     ;; check for new packages (package versions)
     (message "%s" "Emacs is now refreshing its package database...")
     (package-refresh-contents)
     (message "%s" " done.")
     ;; install the missing packages
-    (prelude-require-packages hansen-packages)))
+    (hansen-require-packages hansen-packages)))
 
 (when (package-installed-p `ess)
   (load "ess-site")
@@ -92,6 +94,8 @@ Missing packages are installed automatically."
 (when (package-installed-p `projectile)
   (projectile-global-mode)
   )
+
+(hansen-install-packages)
 
 (provide 'hansen-packages)
 ;;; hansen-packages.el ends here

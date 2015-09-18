@@ -1,3 +1,5 @@
+(message "inside hansen-hooks")
+
 (add-hook 'comint-mode-hook
           '(lambda () (setq comint-input-ignoredups t)))
 

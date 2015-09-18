@@ -1,4 +1,4 @@
-(message "Inside keys_meta")
+(message "inside hansen-keys_meta")
 
 (define-key kdh-keys-minor-mode-map [(meta f)] 'isearch-forward)
 (define-key isearch-mode-map [(meta f)] 'isearch-repeat-forward)

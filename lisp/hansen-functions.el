@@ -1,3 +1,4 @@
+(message "inside hansen-functions.el")
 
 (defun kdh-kill-line-or-region ()
   "If the mark is active, kill the region. Otherwise, kill the line"
