@@ -55,6 +55,7 @@ Missing packages are installed automatically."
   (load "ess-site")
   (setq ess-eval-visibly-p nil)
   (setq inferior-R-args "--no-save --no-restore")
+  (setq eldoc-echo-area-use-multiline-p t)
   )
 
 (when (package-installed-p 'markdown-mode)
